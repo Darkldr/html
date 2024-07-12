@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>نمرات کلاس 209</title>
+</head>
+<body>
+    <h1>نمرات کلاس 209</h1>
+    <h3>رشته مبانی برنامه‌نویسی</h3>
+    <script>
+        const password = prompt("رمز عبور را وارد کنید:");
+        const correctPassword = "abolfazlm82";
+
+        if (password === correctPassword) {
+            const grades = [15, 11, 14, 17, 19, 13, 10, 16, 11, 9, 15, 10];
+            document.write("<br>-------------------------------------<br>");
+            document.write("نمرات قبل از افزودن: " + grades.join(", ") + "<br>");
+            console.log("نمرات قبل از افزودن:", grades);
+
+            const additionalGrade = Number(prompt("مقدار افزایش نمرات را وارد کنید:"));
+            const updatedGrades = grades.map(grade => grade + additionalGrade);
+
+            document.write("<br>-------------------------------------<br>");
+            document.write("نمرات بعد از افزودن: " + updatedGrades.join(", ") + "<br>");
+            document.write("<br>-------------------------------------<br>");
+            console.log("نمرات بعد از افزودن:", updatedGrades);
+        } else {
+            alert("رمز عبور اشتباه است.");
+        }
+    </script>
+</body>
+</html>
